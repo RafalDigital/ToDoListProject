@@ -1,0 +1,145 @@
+.container{
+    width: 100%;
+    height: 500px;
+    margin: 0;
+    align-content: center;
+}
+
+.To-Do-App{
+    width: 60%;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .4);
+    border-radius: 2em;
+    height: 80%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.To-Do-App h1{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    color: orangered;
+}
+
+.InputArea{
+    text-align: center;
+}
+
+#task-input{
+    padding: 15px;
+    border-radius: 2em;
+    border: none;
+    width: 20em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+    margin-right: 1em;
+}
+
+#add-task{
+    background: url(IMG/add-line.png);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 1.5em;
+    padding: 1.5em;
+    background-color: orangered;
+    border: none;
+    border-radius: 100%;
+    transition: .3s;
+    cursor: pointer;
+}
+#add-task:hover{
+    box-shadow: 0 4px 20px rgba(255, 69, 0,.6);
+}
+
+.todo-container{
+    margin-top: 2em;
+}
+
+#task-list{
+    list-style: none;
+}
+
+#task-list li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: .5em auto;
+    width: 80%;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 1em;
+    border-radius: 2em;
+    background-color: white;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, .2);
+    animation: FadeIn .3s forwards;
+}
+
+#task-list li .checkbox{
+    min-width: 20px;
+    height: 20px;
+    border: 2px solid rgba(0, 0, 0, .2);
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    transition: all .3s ease;
+}
+
+#task-list li .checkbox:checked{
+    background-color: orangered;
+    border: 2px solid orangered;
+}
+#task-list li .checkbox:checked::before{
+    content: '\2713';
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1em;
+}
+
+#task-list li.completed span{
+    text-decoration: 2px line-through black;
+}
+
+.task-buttons{
+    display: flex;
+    gap: 10px;
+}
+
+.task-buttons button{
+    border: none;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    color: white;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all .3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task-buttons .edit-btn{
+    background: url(IMG/edit-fill.png);
+    background-color: orangered;
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: center center;
+}
+.task-buttons .delete-btn{
+    background: url(IMG/delete-bin-fill.png);
+    background-color: red;
+    background-repeat: no-repeat;
+    background-size: 1.5em;
+    background-position: center center;
+}
+
+@keyframes FadeIn {
+    0%{opacity: 0; transform: scale(.5);}
+    100%{opacity: 1; transform: scale(1);}
+}
+
+@keyframes FadeOut {
+    0%{opacity: 1; transform: scale(1);}
+    100%{opacity: 0; transform: scale(.5);}
+}
